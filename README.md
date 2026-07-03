@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./Andrei-Valeanu-Banner.svg" alt="Andrei Văleanu Banner" width="100%">
+</p>
+
 <h1 align="center">Hi, I'm Andrei Văleanu</h1>
 
 <p align="center">
