@@ -1,0 +1,336 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="1200" height="500">
+  <defs>
+    <!-- Background gradient - vibrant warm-to-cool -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0c29"/>
+      <stop offset="50%" stop-color="#302b63"/>
+      <stop offset="100%" stop-color="#24243e"/>
+      <animate attributeName="x1" values="0%;30%;0%" dur="12s" repeatCount="indefinite"/>
+      <animate attributeName="y1" values="0%;20%;0%" dur="12s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <!-- Accent gradient for text -->
+    <linearGradient id="nameGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f7971e"/>
+      <stop offset="50%" stop-color="#ffd200"/>
+      <stop offset="100%" stop-color="#f7971e"/>
+      <animate attributeName="x1" values="0%;-50%;0%" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="100%;150%;100%" dur="4s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <!-- Glow filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Soft glow for stars -->
+    <filter id="starGlow">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Quote line gradient -->
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f7971e" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffd200" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#f7971e" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Neural net node gradient -->
+    <radialGradient id="nodeGrad">
+      <stop offset="0%" stop-color="#00d2ff"/>
+      <stop offset="100%" stop-color="#3a7bd5"/>
+    </radialGradient>
+  </defs>
+
+  <!-- ==================== BACKGROUND ==================== -->
+  <rect width="1200" height="500" fill="url(#bgGrad)"/>
+
+  <!-- Subtle grid pattern -->
+  <g opacity="0.04" stroke="#ffffff" stroke-width="0.5">
+    <line x1="0" y1="100" x2="1200" y2="100"/>
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="400" x2="1200" y2="400"/>
+    <line x1="200" y1="0" x2="200" y2="500"/>
+    <line x1="400" y1="0" x2="400" y2="500"/>
+    <line x1="600" y1="0" x2="600" y2="500"/>
+    <line x1="800" y1="0" x2="800" y2="500"/>
+    <line x1="1000" y1="0" x2="1000" y2="500"/>
+  </g>
+
+  <!-- ==================== TWINKLING STARS ==================== -->
+  <g filter="url(#starGlow)">
+    <circle cx="80" cy="60" r="1.5" fill="#ffffff">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="250" cy="30" r="1" fill="#ffd200">
+      <animate attributeName="opacity" values="0.3;0.9;0.3" dur="2.5s" repeatCount="indefinite" begin="0.5s"/>
+    </circle>
+    <circle cx="450" cy="55" r="1.2" fill="#ffffff">
+      <animate attributeName="opacity" values="0.1;1;0.1" dur="4s" repeatCount="indefinite" begin="1s"/>
+    </circle>
+    <circle cx="700" cy="25" r="1.5" fill="#00d2ff">
+      <animate attributeName="opacity" values="0.2;0.8;0.2" dur="3.5s" repeatCount="indefinite" begin="0.3s"/>
+    </circle>
+    <circle cx="950" cy="45" r="1" fill="#ffffff">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2.8s" repeatCount="indefinite" begin="1.5s"/>
+    </circle>
+    <circle cx="1100" cy="70" r="1.3" fill="#ffd200">
+      <animate attributeName="opacity" values="0.15;0.9;0.15" dur="3.2s" repeatCount="indefinite" begin="0.8s"/>
+    </circle>
+    <circle cx="150" cy="140" r="0.8" fill="#ffffff">
+      <animate attributeName="opacity" values="0.2;0.7;0.2" dur="2.2s" repeatCount="indefinite" begin="2s"/>
+    </circle>
+    <circle cx="1050" cy="130" r="1" fill="#00d2ff">
+      <animate attributeName="opacity" values="0.1;0.8;0.1" dur="3.8s" repeatCount="indefinite" begin="0.7s"/>
+    </circle>
+  </g>
+
+  <!-- ==================== NEURAL NETWORK (AI element, top-right) ==================== -->
+  <g opacity="0.3" transform="translate(950, 40)">
+    <!-- Nodes -->
+    <circle cx="0" cy="0" r="5" fill="url(#nodeGrad)">
+      <animate attributeName="r" values="4;6;4" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="60" cy="-30" r="4" fill="url(#nodeGrad)">
+      <animate attributeName="r" values="3;5;3" dur="2.5s" repeatCount="indefinite" begin="0.5s"/>
+    </circle>
+    <circle cx="60" cy="30" r="4" fill="url(#nodeGrad)">
+      <animate attributeName="r" values="3.5;5.5;3.5" dur="2.8s" repeatCount="indefinite" begin="1s"/>
+    </circle>
+    <circle cx="120" cy="-15" r="5" fill="url(#nodeGrad)">
+      <animate attributeName="r" values="4;6;4" dur="3.2s" repeatCount="indefinite" begin="0.3s"/>
+    </circle>
+    <circle cx="120" cy="15" r="4" fill="url(#nodeGrad)">
+      <animate attributeName="r" values="3;5;3" dur="2.7s" repeatCount="indefinite" begin="0.8s"/>
+    </circle>
+    <circle cx="180" cy="0" r="5" fill="url(#nodeGrad)">
+      <animate attributeName="r" values="4.5;6.5;4.5" dur="3.5s" repeatCount="indefinite" begin="0.2s"/>
+    </circle>
+    <!-- Connections -->
+    <line x1="0" y1="0" x2="60" y2="-30" stroke="#00d2ff" stroke-width="0.8" opacity="0.5">
+      <animate attributeName="opacity" values="0.2;0.7;0.2" dur="2s" repeatCount="indefinite"/>
+    </line>
+    <line x1="0" y1="0" x2="60" y2="30" stroke="#00d2ff" stroke-width="0.8" opacity="0.5">
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="2.3s" repeatCount="indefinite" begin="0.5s"/>
+    </line>
+    <line x1="60" y1="-30" x2="120" y2="-15" stroke="#00d2ff" stroke-width="0.8" opacity="0.5">
+      <animate attributeName="opacity" values="0.2;0.8;0.2" dur="1.8s" repeatCount="indefinite" begin="0.3s"/>
+    </line>
+    <line x1="60" y1="-30" x2="120" y2="15" stroke="#00d2ff" stroke-width="0.8" opacity="0.5">
+      <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2.5s" repeatCount="indefinite" begin="0.7s"/>
+    </line>
+    <line x1="60" y1="30" x2="120" y2="-15" stroke="#00d2ff" stroke-width="0.8" opacity="0.5">
+      <animate attributeName="opacity" values="0.2;0.6;0.2" dur="2.1s" repeatCount="indefinite" begin="1s"/>
+    </line>
+    <line x1="60" y1="30" x2="120" y2="15" stroke="#00d2ff" stroke-width="0.8" opacity="0.5">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="1.9s" repeatCount="indefinite" begin="0.4s"/>
+    </line>
+    <line x1="120" y1="-15" x2="180" y2="0" stroke="#00d2ff" stroke-width="0.8" opacity="0.5">
+      <animate attributeName="opacity" values="0.2;0.7;0.2" dur="2.2s" repeatCount="indefinite" begin="0.6s"/>
+    </line>
+    <line x1="120" y1="15" x2="180" y2="0" stroke="#00d2ff" stroke-width="0.8" opacity="0.5">
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="2.4s" repeatCount="indefinite" begin="0.9s"/>
+    </line>
+  </g>
+
+  <!-- ==================== MAIN NAME ==================== -->
+  <text x="600" y="110" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="52" font-weight="bold" fill="url(#nameGrad)" filter="url(#glow)">
+    Văleanu Andrei
+    <animate attributeName="opacity" values="0;1" dur="1.5s" fill="freeze"/>
+  </text>
+
+  <!-- Subtitle - graduation -->
+  <text x="600" y="150" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="18" fill="#b8c5d6" letter-spacing="3">
+    Software Engineer · B.Sc. graduating Summer 2027
+    <animate attributeName="opacity" values="0;1" dur="1.5s" fill="freeze" begin="0.5s"/>
+  </text>
+
+  <!-- UPB ACS -->
+  <text x="600" y="175" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#7a8ba3" letter-spacing="2">
+    Faculty of Automatic Control and Computers · University Politehnica of Bucharest
+    <animate attributeName="opacity" values="0;1" dur="1.5s" fill="freeze" begin="0.8s"/>
+  </text>
+
+  <!-- ==================== SEPARATOR LINE ==================== -->
+  <line x1="350" y1="195" x2="850" y2="195" stroke="url(#lineGrad)" stroke-width="1" opacity="0.6">
+    <animate attributeName="x1" values="550;350" dur="1.5s" fill="freeze" begin="1s"/>
+    <animate attributeName="x2" values="650;850" dur="1.5s" fill="freeze" begin="1s"/>
+  </line>
+
+  <!-- ==================== MINDSET QUOTE ==================== -->
+  <text x="600" y="230" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="15" fill="#e0c97f" font-style="italic" opacity="0">
+    "I do not just write code — I refactor reality."
+    <animate attributeName="opacity" values="0;0.9" dur="1.5s" fill="freeze" begin="1.5s"/>
+  </text>
+
+  <!-- ==================== DOC HUDSON QUOTE ==================== -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="1.5s" fill="freeze" begin="2s"/>
+
+    <!-- Quote accent line left -->
+    <rect x="245" y="260" width="3" height="45" rx="1.5" fill="url(#lineGrad)" opacity="0.7"/>
+
+    <text x="265" y="278" font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="#c8d6e5" font-style="italic">
+      "If you're goin' hard enough left, you'll find yourself turnin' right."
+    </text>
+    <text x="265" y="298" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#f7971e" font-weight="600">
+      — Doc Hudson
+    </text>
+  </g>
+
+  <!-- ==================== SECOND QUOTE ==================== -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="1.5s" fill="freeze" begin="2.5s"/>
+
+    <!-- Quote accent line left -->
+    <rect x="245" y="315" width="3" height="45" rx="1.5" fill="url(#lineGrad)" opacity="0.7"/>
+
+    <text x="265" y="333" font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="#c8d6e5" font-style="italic">
+      "The best solutions are often found where intuition
+    </text>
+    <text x="265" y="353" font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="#c8d6e5" font-style="italic">
+      and unconventional thinking meet."
+    </text>
+  </g>
+
+  <!-- ==================== DOC HUDSON CAR (silhouette, racing across) ==================== -->
+  <g transform="translate(0, 385)" opacity="0.85">
+    <animateTransform attributeName="transform" type="translate" 
+      values="-250,385;1450,385" dur="14s" repeatCount="indefinite"/>
+    
+    <!-- Car body - classic 1951 Hudson Hornet silhouette -->
+    <g fill="#4a90d9" filter="url(#glow)">
+      <!-- Main body -->
+      <path d="M20,0 C25,-18 40,-28 60,-30 L120,-30 C140,-28 155,-22 165,-8 L175,0 Z" fill="#4a90d9"/>
+      <!-- Lower body -->
+      <rect x="5" y="0" width="180" height="12" rx="3" fill="#3a7bd5"/>
+      <!-- Hood -->
+      <path d="M165,-8 L195,-2 L195,5 L175,5 Z" fill="#3a7bd5"/>
+      <!-- Trunk -->
+      <path d="M5,0 L-5,2 L-5,8 L15,8 L15,0 Z" fill="#3a7bd5"/>
+      <!-- Windshield -->
+      <path d="M90,-28 L120,-28 C130,-27 138,-24 142,-18 L118,-18 Z" fill="#7ab8f5" opacity="0.5"/>
+      <!-- Chrome trim -->
+      <rect x="0" y="10" width="195" height="2" rx="1" fill="#c0c0c0" opacity="0.6"/>
+      <!-- Headlight -->
+      <circle cx="190" cy="4" r="4" fill="#ffd200" opacity="0.8">
+        <animate attributeName="opacity" values="0.6;1;0.6" dur="0.5s" repeatCount="indefinite"/>
+      </circle>
+      <!-- Tail light -->
+      <circle cx="0" cy="4" r="3" fill="#ff3333" opacity="0.7"/>
+      <!-- Wheels -->
+      <circle cx="45" cy="14" r="10" fill="#1a1a2e" stroke="#555" stroke-width="2"/>
+      <circle cx="45" cy="14" r="4" fill="#888"/>
+      <circle cx="155" cy="14" r="10" fill="#1a1a2e" stroke="#555" stroke-width="2"/>
+      <circle cx="155" cy="14" r="4" fill="#888"/>
+      <!-- Number 51 (Doc Hudson's number) -->
+      <text x="95" y="6" text-anchor="middle" font-family="'Arial Black', sans-serif" font-size="11" fill="#ffd200" font-weight="bold">51</text>
+    </g>
+
+    <!-- Speed lines behind car -->
+    <g stroke="#4a90d9" stroke-width="1" opacity="0.4">
+      <line x1="-10" y1="2" x2="-50" y2="2">
+        <animate attributeName="opacity" values="0.1;0.5;0.1" dur="0.3s" repeatCount="indefinite"/>
+      </line>
+      <line x1="-10" y1="8" x2="-60" y2="8">
+        <animate attributeName="opacity" values="0.1;0.4;0.1" dur="0.4s" repeatCount="indefinite" begin="0.1s"/>
+      </line>
+      <line x1="-10" y1="14" x2="-45" y2="14">
+        <animate attributeName="opacity" values="0.1;0.5;0.1" dur="0.35s" repeatCount="indefinite" begin="0.2s"/>
+      </line>
+    </g>
+  </g>
+
+  <!-- ==================== BOEING 747 (flying across top) ==================== -->
+  <g transform="translate(1400, 80)" opacity="0.6">
+    <animateTransform attributeName="transform" type="translate"
+      values="1400,80;-300,60" dur="20s" repeatCount="indefinite"/>
+    
+    <!-- Fuselage -->
+    <ellipse cx="0" cy="0" rx="70" ry="7" fill="#c8d6e5"/>
+    <!-- Wings -->
+    <path d="M-10,0 L-35,25 L-25,25 L5,5 Z" fill="#a8b8c8"/>
+    <path d="M-10,0 L-35,-25 L-25,-25 L5,-5 Z" fill="#a8b8c8"/>
+    <!-- Tail -->
+    <path d="M-65,-2 L-80,-20 L-70,-20 L-58,-5 Z" fill="#a8b8c8"/>
+    <path d="M-65,0 L-75,12 L-68,12 L-60,3 Z" fill="#a8b8c8" opacity="0.7"/>
+    <!-- Engines (4 engines - 747!) -->
+    <ellipse cx="-15" cy="8" rx="8" ry="3" fill="#8899aa"/>
+    <ellipse cx="-28" cy="17" rx="7" ry="2.5" fill="#8899aa"/>
+    <ellipse cx="-15" cy="-8" rx="8" ry="3" fill="#8899aa"/>
+    <ellipse cx="-28" cy="-17" rx="7" ry="2.5" fill="#8899aa"/>
+    <!-- Windows -->
+    <g fill="#7ab8f5" opacity="0.4">
+      <rect x="-50" y="-3" width="2" height="2" rx="0.5"/>
+      <rect x="-44" y="-3" width="2" height="2" rx="0.5"/>
+      <rect x="-38" y="-3" width="2" height="2" rx="0.5"/>
+      <rect x="-32" y="-3" width="2" height="2" rx="0.5"/>
+      <rect x="-26" y="-3" width="2" height="2" rx="0.5"/>
+      <rect x="-20" y="-3" width="2" height="2" rx="0.5"/>
+      <rect x="-14" y="-3" width="2" height="2" rx="0.5"/>
+      <rect x="-8" y="-3" width="2" height="2" rx="0.5"/>
+      <rect x="-2" y="-3" width="2" height="2" rx="0.5"/>
+      <rect x="4" y="-3" width="2" height="2" rx="0.5"/>
+      <rect x="10" y="-3" width="2" height="2" rx="0.5"/>
+      <rect x="16" y="-3" width="2" height="2" rx="0.5"/>
+      <rect x="22" y="-3" width="2" height="2" rx="0.5"/>
+      <rect x="28" y="-3" width="2" height="2" rx="0.5"/>
+      <rect x="34" y="-3" width="2" height="2" rx="0.5"/>
+    </g>
+    <!-- Contrail -->
+    <line x1="-80" y1="0" x2="-160" y2="0" stroke="white" stroke-width="2" opacity="0.15">
+      <animate attributeName="opacity" values="0.1;0.2;0.1" dur="2s" repeatCount="indefinite"/>
+    </line>
+    <line x1="-80" y1="3" x2="-150" y2="5" stroke="white" stroke-width="1.5" opacity="0.1">
+      <animate attributeName="opacity" values="0.05;0.15;0.05" dur="2.5s" repeatCount="indefinite" begin="0.5s"/>
+    </line>
+  </g>
+
+  <!-- ==================== LEGEND BADGE ==================== -->
+  <g opacity="0" transform="translate(600, 440)">
+    <animate attributeName="opacity" values="0;0.7" dur="1.5s" fill="freeze" begin="3s"/>
+    
+    <!-- Decorative brackets -->
+    <text x="0" y="5" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#7a8ba3" letter-spacing="4">
+      RESPECTING LEGENDS · BUILDING THE FUTURE
+    </text>
+  </g>
+
+  <!-- ==================== TECH BADGES (bottom, subtle) ==================== -->
+  <g opacity="0" transform="translate(600, 470)">
+    <animate attributeName="opacity" values="0;0.45" dur="1.5s" fill="freeze" begin="3.5s"/>
+    <text x="0" y="0" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#5a6a7a" letter-spacing="3">
+      C · C++ · Python · PyTorch · CUDA · x86 ASM · Haskell · OpenGL · FPGA
+    </text>
+  </g>
+
+  <!-- ==================== FLOATING PARTICLES ==================== -->
+  <g opacity="0.15">
+    <circle cx="100" cy="350" r="2" fill="#ffd200">
+      <animate attributeName="cy" values="350;330;350" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.1;0.3;0.1" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="420" r="1.5" fill="#00d2ff">
+      <animate attributeName="cy" values="420;395;420" dur="4s" repeatCount="indefinite" begin="1s"/>
+      <animate attributeName="opacity" values="0.1;0.25;0.1" dur="4s" repeatCount="indefinite" begin="1s"/>
+    </circle>
+    <circle cx="900" cy="370" r="2" fill="#f7971e">
+      <animate attributeName="cy" values="370;345;370" dur="6s" repeatCount="indefinite" begin="2s"/>
+      <animate attributeName="opacity" values="0.1;0.3;0.1" dur="6s" repeatCount="indefinite" begin="2s"/>
+    </circle>
+    <circle cx="1100" cy="400" r="1.5" fill="#00d2ff">
+      <animate attributeName="cy" values="400;380;400" dur="4.5s" repeatCount="indefinite" begin="0.5s"/>
+      <animate attributeName="opacity" values="0.1;0.2;0.1" dur="4.5s" repeatCount="indefinite" begin="0.5s"/>
+    </circle>
+  </g>
+
+</svg>
