@@ -184,6 +184,9 @@ I blend the rigors of **Functional Programming** (Haskell, Racket) with the visu
 ## GitHub Stats
 
 <p align="center">
+  <img src="./Skills-Chart.svg" alt="Skills & Expertise" width="100%">
+</p>
+<p align="center">
   <img height="160" src="https://github-readme-stats.vercel.app/api?username=AndreiValeanu22&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true" alt="GitHub stats">
   <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AndreiValeanu22&layout=compact&theme=tokyonight&hide_border=true&langs_count=10" alt="Top languages">
 </p>
